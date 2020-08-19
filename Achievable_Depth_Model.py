@@ -1,4 +1,3 @@
-
 # coding: utf-8
 
 # Calculating achievable depth and quantum volume as a function of experimental paramaters for a trapped ion design
@@ -110,7 +109,7 @@ shuttleSpeed=114
 #Time to perform a separation or merge (microseconds)
 separationMerge=80
 
-#square QV if square==1, else plot log_2(QV)
+#square QV if square==1, else plot (QV)^0.5
 square=0
 
 #Calculate and plot
@@ -137,6 +136,5 @@ plt.plot(errors,ion,'g-',label="Ions with $t/c$ \u2248 5 x$10^{-5}$")
 plt.plot(errors,sc,'y-',label="Superconducting square grid")
 plt.legend(loc="upper left")
 plt.xlabel('1/\u03B5 ')
-plt.ylabel('$log_2$ ($QV_{native}$)')
+plt.ylabel('($QV_{native})^{1/2}$')
 ax.set_xscale('log')
-
